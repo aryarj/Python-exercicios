@@ -1,0 +1,129 @@
+#1, exercício
+#print('Aló mundo')
+
+#2, exercício
+'''
+print('Digite um número')
+n=input()
+print('O número digitado foi:  \n',n)
+'''
+#3, exercício
+'''
+n1=int(input('Digite um número \n'))
+n2=int(input('Digite outro número \n'))
+print('a soma dos doi números será: \n',n1+n2)
+'''
+#4, exercício
+'''
+print('Digite cada uma das notas bimestrais para o cálculo da média')
+i=0
+m=0
+while i<4:
+  print('Digite a nota do bimestre',i+1)
+  n=float(input())
+  m=n+m
+  i=i+1
+  
+print('A média anual foi: \n', m/4)
+'''
+
+#5, exercício
+'''
+m=float(input('Digite a distância em metros \n'))
+print('A distância em cm será: \n',m*100)
+'''
+
+#6, exercício
+'''
+r=float(input('Digite o valor do raio do circulo que você deseja saber a área \n'))
+print('A área do circulo em unidades de distância ao quadrado será:\n',3.141516*r**2)
+'''
+#7, exercício
+'''
+a=float(input('Digite o valor da aresta de um quadrado \n'))
+print('A área do quadrado será:\n',a**2)
+print('O dobro dessa área será:\n',2*a**2)
+'''
+
+#8, exercício
+'''
+gh=float(input('Quanto você ganha por hora? \n'))
+hm=float(input('Quantas horas você trabalha por mês? \n'))
+print('O seu ganho mensal será de :',gh*hm,' reais')
+'''
+
+#9, exercício
+'''
+f=float(input('Digite a temperatura em graus Farenheit \n'))
+print('A temperatura em graus Celsius será:\n',5/9*(f-32))
+'''
+
+#10, exercício
+'''
+c=float(input('Digite a temperatura em graus Celsius \n'))
+print('A temperatura em graus Farenheit será:\n',9/5*c+32)
+'''
+
+#11, exercício
+'''
+n1=int(input('Digite um número inteiro\n'))
+n2=int(input('Digite outro número inteiro\n'))
+n3=float(input('Digite um número real \n'))
+print('O produto do dobro do primeiro com metade do segundo será:\n',2*n1*n2/2)
+print('A soma do triplo do primeiro com o terceiro será:\n',3*n1+n3)
+print('O terceiro elevado ao cubo será:\n',n3**3)
+'''
+
+#12, exercício
+'''
+h=float(input('Digite a altura da pessoa em metros \n'))
+print('O peso ideal será de: ',72.7*h-58, ' quilos')
+'''
+
+#13, exercício
+'''
+h=float(input('Digite a altura da pessoa em metros \n'))
+g=input('Digite h para homen e m para mulher \n')
+if(g=='h'):
+  print('O peso ideal será de: ',72.7*h-58, ' quilos')
+else:
+  print('O peso ideal será de: ',62.1*h-44.7, ' quilos')
+'''
+
+#14, exercício
+'''
+m=float(input('Digite a quantidade de quilos de peixe \n'))
+if(m<=50):
+  print('Não há excesso de peso \n')
+else:
+  print('O excesso de peso foi de: ',m-50,' quilos \n')
+  print('O valor da multa será de: ', (m-50)*4,' Reais')
+'''
+
+#15, exercício
+'''
+gh=float(input('Quanto você ganha por hora? \n'))
+hm=float(input('Quantas horas você trabalha por mês? \n'))
+print('Salário bruto:',gh*hm,' reais')
+print('Desconto do INSS será:',gh*hm*0.08,' reais')
+print('Desconto do sindicato:',gh*hm*0.05,' reais')
+print('Desconto do IRPF:',gh*hm*0.11,' reais')
+print('Salário líquido:',gh*hm-gh*hm*(0.08+0.05+0.11),' reais')
+
+#16, exercício
+'''
+h=float(input('Qual é a altura da superfície? \n'))
+l=float(input('Qual é o comprimento da superfície? \n'))
+A=h*l
+print('A área da parede será de: ',A,' metros^2')
+ql=A/3
+print('Serão necessários: ',ql,' litros de tinta')
+lt=ql/18
+print('Então serão necessárias: ',lt,' latas de tinta')
+if(ql%18==0):
+  print('As ',lt,' latas de tinta custarão: ',lt*80,' Reais')
+else:
+  print('As ',ql//18+1,' latas de tinta custarão: ',(ql//18+1)*80,' Reais')
+'''
+
+'''

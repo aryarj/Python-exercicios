@@ -1,0 +1,540 @@
+#1, exercício
+'''
+n1=int(input('Digite um número \n'))
+n2=int(input('Digite outro número \n'))
+if(n1>n2):
+  print('O maior número é: ',n1)
+else:
+  print('O maior número é: ',n2)
+'''
+
+#2, exercício
+'''
+n=float(input('Digite um número \n'))
+if(n>0):
+  print('O número é positivo')
+if(n<0):
+  print('O número é negativo')
+if(n==0):
+  print('O número é zero')
+'''
+
+#3, exercício
+'''
+l=(input('Digite um F para feminino ou M para masculino \n'))
+if(l=='M' or l=='m'):
+  print('Masculino')
+if(l=='F' or l=='f'):
+  print('Feminino')
+if(l!='M' and l!='F' and l!='m' and l!='f' ):
+  print('sexo indefinido')
+'''
+
+#4, exercício
+'''
+l=(input('Digite uma letra \n'))
+if(l=='a' or l=='A' or l=='e' or l=='E' or l=='i' or l=='I' or l=='o' or l=='O' or l=='u' or l=='U'):
+  print('A letra ',l,' é vogal')
+else:
+  print('A letra ',l,' é consoante')
+'''
+
+#5, exercício
+'''
+print('Digite cada uma das notas das duas provas para o cálculo da média')
+i=0
+s=0
+while i<2:
+  print('Digite a nota',i+1)
+  n=float(input())
+  s=s+n
+  i=i+1
+m=s/2
+print('A média foi: \n', m)
+if(m==10):
+  print('Aprovado com distinção')
+elif(m<7):
+  print('Reprovado, sinto muito')
+else:
+  print('Aprovado')
+'''
+
+#6, exercício
+'''
+i=0
+n=[]
+while i<3:
+  n.append(float(input('Digite um número \n')))
+  i=i+1
+print ('o maior dos número é: ', max(n))
+'''
+
+#7, exercício
+'''
+i=0
+n=[]
+while i<3:
+  n.append(float(input('Digite um número \n')))
+  i=i+1
+print ('o menor dos número é: ', min(n))
+'''
+
+#8, exercício
+'''
+i=1
+n=[]
+while i<4:
+  print('Digite o preço do produto',i)
+  n.append(float(input()))
+  i=i+1
+print ('O produto de menor preço vale: ', min(n), ' Reais')
+'''
+
+#9, exercício
+n1 = float(input('Primeiro numero: '))
+n2  = float(input('Segundo numero : '))
+n3 = float(input('Terceiro numero: '))
+
+print(n1,'-',n2,'-',n3)
+
+if(n3 > n2):
+        aux = n3
+        n3 = n2
+        n2 = aux
+
+if(n2 > n1):
+        aux = n2
+        n2 = n1
+        n1 = aux
+
+if(n3 > n2):
+        aux = n3
+        n3 = n2
+        n2 = aux
+
+print(n1,'-',n2,'-',n3)
+
+#10, exercício
+p = (input('Em que turno você estuda? Digite: M para matutino, V para Vespertino ou N para noturno \n'))
+if(p=='m' or p=='M'):
+  print('Bom dia')
+elif(p=='v' or p=='V'):
+  print('Bom tarde')
+elif(p=='n' or p=='N'):
+  print('Boa noite')
+else:
+    print('Entrada inválida')
+
+#11, exercício
+s = float(input('Digite o seu salário: \n'))
+if(s<=280):
+  print('O reajuste foi de 20%')
+  print('O valor do acrescímo foi de: ',round(s*0.2,2))
+  print('O seu novo salário será de: ',round(s*1.2,2))
+if(s>280 and s<=700):
+  print('O reajuste foi de 15%')
+  print('O valor do acrescímo foi de: ',round(s*0.15,2))
+  print('O seu novo salário será de: ',round(s*1.15,2))
+if(s>700 and s<=1500):
+  print('O reajuste foi de 10%')
+  print('O valor do acrescímo foi de: ',round(s*0.1,2))
+  print('O seu novo salário será de: ',round(s*1.1,2))
+if(s>1500):
+  print('O reajuste foi de 5%')
+  print('O valor do acrescímo foi de: ',round(s*0.05,2))
+  print('O seu novo salário será de: ',round(s*1.05,2))
+
+#12, exercício
+s = float(input('Digite o seu salário: \n'))
+if(s<=900):
+  print('Salário bruto: ',s)
+  print('IRPF: isento')
+  print('INSS',round(s*0.1,2))
+  print('FGTS',round(s*0.11,2))
+  print('Contr. Sindical',round(s*0.03,2))
+  print('Total de descontos',round(s*(0.1+0.03),2))
+  print('Salário líquido',round((s-s*(0.1+0.03)),2))
+if(s>900 and s<=1500):
+  print('Salário bruto: ',s)
+  print('IRPF:',round(s*0.05,2))
+  print('INSS',round(s*0.1,2))
+  print('FGTS',round(s*0.11,2))
+  print('Contr. Sindical',round(s*0.03,2))
+  print('Total de descontos',round((s*(0.1+0.03+0.05)),2))
+  print('Salário líquido',round((s-s*(0.1+0.03+0.05)),2))
+if(s>1500 and s<=2500):
+  print('Salário bruto: ',s)
+  print('IRPF:',round(s*0.1,2))
+  print('INSS',round(s*0.1,2))
+  print('FGTS',round(s*0.11,2))
+  print('Contr. Sindical',round(s*0.03,2))
+  print('Total de descontos',round(s*(0.1+0.03+0.1),2))
+  print('Salário líquido',round((s-s*(0.1+0.03+0.1)),2))
+if(s>2500):
+  print('Salário bruto: ',s)
+  print('IRPF:',round(s*0.2,2))
+  print('INSS',round(s*0.1,2))
+  print('FGTS',round(s*0.11,2))
+  print('Contr. Sindical',round(s*0.03,2))
+  print('Total de descontos',round(s*(0.1+0.03+0.2),2))
+  print('Salário líquido',round((s-s*(0.1+0.03+0.2)),2))
+
+
+#13, exercício
+d = float(input('Um número de 1 a 7, para mostrar o dia da semana correspondente: \n'))
+if(d==1):
+  print('Domingo')
+if(d==2):
+  print('Segunda-feira')
+if(d==3):
+  print('Terça-feira')
+if(d==4):
+  print('Quarta-feira')
+if(d==5):
+  print('Quinta-feira')
+if(d==6):
+  print('Sexta-feira')
+if(d==7):
+  print('Sábado')
+if(d!=1 and d!=2 and d!=3 and d!=4 and d!=5 and d!=6 and d!=7):
+  print('Valor inválido')
+
+#14, exercício
+n1 = float(input('Digite a primeira nota: \n'))
+n2 = float(input('Digite a segunda nota: \n'))
+m=(n1+n2)/2
+print('A média foi de: ',round(m,1))
+if(m>=9 and m<=10):
+  print('Aprovado com média A')
+if(m>=7.5 and m<9):
+  print('Aprovado com média B')
+if(m>=6 and m<7.5):
+  print('Aprovado com média C')
+if(m>=4 and m<6):
+  print('Reprovado com média D')
+if(m>=0 and m<4):
+  print('Reprovado com média E')
+
+#15, exercício
+l1 = float(input('Digite o lado número 1 do triângulo: \n'))
+l2 = float(input('Digite o lado número 2 do triângulo: \n'))
+l3 = float(input('Digite o lado número 3 do triângulo: \n'))
+if(l1==l2 and l2==l3):
+  print('O triângulo é equilátero')
+if((l1==l2 and l2!=l3) or (l1==l3 and l1!=l2) or (l2==l3 and l1!=l2)):
+  print('O triângulo é isóceles')
+if(l1!=l2 and l2!=l3 and l1!=l3):
+  print('O triângulo é escaleno')
+
+#16, exercício
+print('Reesolução de uma equação de segundo grau')
+a=float(input('Digite o termo a \n'))
+if(a==0):
+  print('a=0, então, não é uma equação de segundo grau')
+  print('Fim')
+  
+if(a!=0):
+  b=float(input('Digite o termo b \n'))
+  c=float(input('Digite o termo c \n'))
+  delta=b**2-4*a*c
+  print('delta = ',delta)
+  if(delta<0):
+    print('O delta é negativo, essa equação de segundo grau não tem solução')
+  if(delta==0):
+    print('O delta vale zero, essa equação de segundo grau só tem uma solução, que é:')
+    print((-b+delta)/(2*a))
+  if(delta!=0):
+    print('Essa equação de segundo grau tem duas soluções:')
+    print('a primeira é: ', (-b+(delta)**(0.5))/(2*a))
+    print('a segunda é: ', (-b-(delta)**(0.5))/(2*a))
+
+#2 (17), exercício
+ano=int(input('Digite um ano com quatro digitos \n'))
+if(ano%4==0):
+  print(ano,' é um ano bissexto')
+if(ano%4!=0):
+  print(ano,' não é um ano bissexto')
+
+#3 (18), exercício
+dia=int(input('Digite um dia com dois digitos (dd) \n'))
+mes=int(input('Digite um mês com dois digitos (mm) \n'))
+ano=int(input('Digite um ano com quatro digitos (aaaa) \n'))
+print(dia,'/',mes,'/',ano)
+#Testa de o ano é bissexto
+if(mes==2 and ano%4!=0 and dia<=28):
+  print('Essa é uma data válida')
+elif(mes==2 and ano%4==0 and dia<=29):
+  print('Essa é uma data válida')
+#Testa se o mês tem 31 dias
+elif((mes==1 or mes==3 or mes==5 or mes==7 or mes==8 or mes==10 or mes==12) and dia<=31):
+  print('Essa é uma data válida')
+#Testa se o mês tem 30 dias
+elif((mes==4 or mes==6 or mes==9 or mes==11) and dia<=30):
+  print('Essa é uma data válida')
+
+else:
+  print('Essa não é uma data válida')
+
+#4 (19), exercício
+n=int(input('Digite um número abaixo de 1000 \n'))
+if(n>1000 or n==0):
+  print('Esse não é um número válido')
+  print('Fim')
+else:
+  c=n//100
+  d=(n-c*100)//10
+  u=(n-c*100-d*10)
+  print('Esse número tem:')
+  if(c>1 and d>1 and u>1):
+   print(c,' centenas,',d,'dezenas e',u,' unidades')
+  if(c==1 and d>1 and u>1):
+   print(c,' centena,',d,'dezenas e',u,' unidades')
+  if(c>1 and d==1 and u>1):
+   print(c,' centenas,',d,'dezena e',u,' unidades')
+  if(c>1 and d>1 and u==1):
+   print(c,' centenas,',d,'dezenas e',u,' unidade')
+  if(c==1 and d==1 and u>1):
+   print(c,' centena,',d,'dezena e',u,' unidades')
+  if(c==1 and d>1 and u==1):
+   print(c,' centena,',d,'dezenas e',u,' unidade')
+  if(c==1 and d==1 and u==1):
+   print(c,' centena,',d,'dezena e',u,' unidade')
+  if(c>1 and d==1 and u==1):
+   print(c,' centenas,',d,'dezena e',u,' unidade')
+  if(c==0 and d>1 and u>1):
+   print(d,'dezenas e',u,' unidades')
+  if(c==0 and d>1 and u==1):
+   print(d,'dezenas e',u,' unidade')
+  if(c==0 and d==1 and u>1):
+   print(d,'dezena e',u,' unidades')
+  if(c==0 and d==1 and u==1):
+   print(d,'dezena e',u,' unidade')
+  if(c>1 and d==0 and u>1):
+   print(c,' centenas e ',u,' unidades')
+  if(c==1 and d==0 and u>1):
+   print(c,' centena e ',u,' unidades')
+  if(c>1 and d==0 and u==1):
+   print(c,' centenas e ',u,' unidade')
+  if(c==1 and d==0 and u==1):
+   print(c,' centena e ',u,' unidade')
+  if(c>1 and d>1 and u==0):
+   print(c,' centenas e',d,'dezenas')
+  if(c>1 and d==1 and u==0):
+   print(c,' centenas e',d,'dezena')
+  if(c==1 and d>1 and u==0):
+   print(c,' centena e',d,'dezenas')
+  if(c==1 and d==1 and u==0):
+   print(c,' centena e',d,'dezena')
+  if(c>1 and d==0 and u==0):
+   print(c,' centenas')
+  if(c==1 and d==0 and u==0):
+   print(c,' centena')
+  if(c==0 and d>1 and u==0):
+   print(d,'dezenas')
+  if(c==0 and d==1 and u==0):
+   print(d,'dezena')
+  if(c==0 and d==0 and u>1):
+   print(u,' unidades')
+  if(c==0 and d==0 and u==1):
+   print(u,' unidade')
+
+#2 (20), exercício
+n1=float(input('Digite a primeira nota do aluno \n'))
+n2=float(input('Digite a segunda nota do aluno \n'))
+n3=float(input('Digite a terceira nota do aluno \n'))
+m=(n1+n2+n3)/3
+print('A nota média foi: ',m)
+if(m==10):
+  print('Aprovado com distinção')
+elif(m<7):
+  print('Sinto muito, mas você foi reprovado')
+else:
+  print('Aprovado')
+
+#2 (21), exercício
+q=int(input('Digite a quantia desejada entre R$ 10 e R$ 600 \n'))
+if (q<10 or q>600):
+  print('Valor inválido, tente novamente')
+  print('Fim')
+else:
+  c=q//100
+  if(c!=0):
+   print('Retire: ',c,'notas de R$100')
+  d50=(q-c*100)//50
+  if(d50!=0):
+   print('Retire: ',d50,'notas de R$50')
+  d10=(q-c*100-d50*50)//10
+  if(d10!=0):
+   print('Retire: ',d10,'notas de R$10')
+  u5=(q-c*100-d50*50-d10*10)//5
+  if(u5!=0):
+   print('Retire: ',u5,'notas de R$5')
+  u=q-c*100-d50*50-d10*10-u5*5
+  if(u!=0):
+   print('Retire: ',u,'notas de R$1')
+
+#3 (22), exercício
+n=int(input('Digite um número inteiro positivo \n'))
+if(n%2==0):
+  print('Esse número é par')
+else:
+  print('Esse número é impar')
+
+#4 (23), exercício
+n=float(input('Digite um número inteiro ou decimal positivo \n'))
+if(n//1==n):
+  print('Esse número é inteiro')
+else:
+  print('Esse número é decimal')
+
+#5 (24), exercício
+n1=float(input('Digite um número qualquer \n'))
+n2=float(input('Digite um outro número qualquer, que não seja zero \n'))
+if(n2==0):
+  print('Valor inválido')
+  print('Fim')
+else:
+  op=int(input('Digite 1-para soma, 2-para subtração, 3 para multiplicação e 4-para divisão \n'))
+  if(op==1):
+    r=n1+n2
+  if(op==2):
+    r=n1-n2
+  if(op==3):
+    r=n1*n2
+  if(op==4):
+    r=n1/n2
+  print('resultado = ',r)
+  print("classificação do resultado")
+  if(r==0):
+    print('nem para e nem impar')
+  elif(r%2==0):
+    print('par')
+  else:
+    print('impar')
+  if(r>0):
+    print('positivo')
+  else:
+    print('negativo')
+  if(r//1==r):
+    print('inteiro')
+  else:
+    print('decimal')
+
+#7 (25), exercício
+print('Por favor, responda as 5 perguntas sobre o crime, utilize "S" para sim e "N" para não ')
+count=0
+p1=input('Telefonou para a vitima? \n')
+p2=input('Esteve no local do crime? \n')
+p3=input('Mora perto da vitima? \n')
+p4=input('Devia para a vitima? \n')
+p5=input('Já trabalhou com a vitima? \n')
+if(p1=='s' or p1=='S'):
+  count=count+1
+if(p2=='s' or p2=='S'):
+  count=count+1
+if(p3=='s' or p3=='S'):
+  count=count+1
+if(p4=='s' or p4=='S'):
+  count=count+1
+if(p5=='s' or p5=='S'):
+  count=count+1
+print('Quantidade de Sims: ',count)
+if(count<=1):
+  print('inocente')
+if(count>1 and count<=2):
+  print('Suspeita')
+if(count>2 and count<=4):
+  print('Cúmplice')
+if(count==5):
+  print('Assassina')
+
+#7 (26), exercício
+t=input('Escolha o tipo de combustível, "A" para álcool e "G" para gasolina \n')
+q=float(input('Digite a quantidade de litros abastecida \n'))
+if(t=='a' or t=='A'):
+  print('preço a ser pago sem desconto: R$',round(q*1.9,2))
+  if(q<=20):
+    print('preço a ser pago com desconto de 4%: R$',round(q*1.9*0.96,2))
+  else:
+    print('preço a ser pago com desconto de 6%: R$',round(q*1.9*0.94,2))
+if(t=='g' or t=='G'):
+  print('preço a ser pago sem desconto: R$',round(q*2.5,2))
+  if(q<=20):
+    print('preço a ser pago com desconto de 4%: R$',round(q*2.5*0.96,2))
+  else:
+    print('preço a ser pago com desconto de 6%: R$',round(q*2.5*0.94,2))
+
+#8 (27), exercício
+qo=float(input('Digite a quantidade de quilos adquirida de morangos \n'))
+print('A quantidade adquirida de morangos foi de: ',qo,'quilos')
+if(qo<=5):
+  vo=qo*2.5
+  print('preço por quilo de morango será de R$ 2,50: R$',round(vo,2))
+else:
+  vo=qo*2.2
+  print('preço por quilo de morango será de R$ 2,20: R$',round(vo,2))
+qa=float(input('Digite a quantidade de quilos adquirida de maçãs \n'))
+print('A quantidade adquirida de maçãs foi de: ',qa,'quilos')
+if(qa<=5):
+  va=qa*1.8
+  print('preço por quilo de maçãs será de R$ 1,80: R$',round(va,2))
+else:
+  va=qa*1.5
+  print('preço por quilo de maçãs será de R$ 1,50: R$',round(va,2))
+print('A quantidade total em quilos foi de: ',qa+qo,' quilos')
+if((qa+qo)>8 or (vo+va)>25):
+  print('valor total sem desconto: R$',round((vo+va),2))
+  print('Para compras acima de 8 kg ou de R$25 há um desconto de 10%, então, o valor final será: R$',round((vo+va)*0.9,2))
+else:
+  print('valor total da compra: R$',round((vo+va),2))
+
+#2 (28), exercício
+t=int(input('Por favor, digite 1-para File Duplo, 2-para Alcatra e 3 para Picanha \n'))
+if(t!=1 and t!=2 and t!=3):
+  print('Tipo de carne inválido')
+  print('recomece o processo')
+else:
+    q=float(input('Por favor, digite a quantidade de quilos: \n'))
+    print('O pagamento será feito com o cartão fidelidade Tabajara? Digite "S" pra Sim e "N" para Não \n')
+    c=input()
+    if(c=='s' or c=='S'):
+        print('Você tem direito a um desconto de 5% \n')
+    if(t==1):
+      print('Tipo de carne: File Duplo')
+      print('Quantidade: ',q,'kg')
+      if(q<=5):
+        v=q*4.9
+        print('Valor: R$',round(v,2))
+      else:
+        v=q*5.8
+        print('Valor: R$',round(v,2))
+        
+    elif(t==2):
+      print('Tipo de carne: Alcatra')
+      print('Quantidade: ',q,'kg')
+      if(q<=5):
+        v=q*5.9
+        print('Valor: R$',round(v,2))
+      else:
+        v=q*6.8
+        print('Valor: R$',round(v,2))
+    elif(t==3):
+      print('Tipo de carne: Picanha')
+      print('Quantidade: ',q,'kg')
+      if(q<=5):
+        v=q*6.9
+        print('Valor: R$',round(v,2))
+      else:
+        v=q*7.8
+        print('Valor: R$',round(v,2))
+    else:
+      print('Tipo de carne inválido')
+
+    
+    if(c=='s' or c=='S'):
+      print('Pagamento com cartão Tabajara')
+      print('Valor final a pagar com desconto (5%): R$', round(v*0.95,2))
+      
+    else:
+        print('Pagamento em dinheiro, cheque ou cartão comum')
+        print('Valor final a pagar (sem direito a desconto): R$', round(v,2))
